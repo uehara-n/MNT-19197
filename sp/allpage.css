@@ -1,0 +1,728 @@
+@charset "UTF-8";
+/*-------------========全体構成＆TOPページ=======------------*/
+html>img{
+	display: none;
+}
+
+body {
+	font-family: sans-serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+	text-align: center;
+	font-size: 12px;
+}
+body, html {
+	-webkit-text-size-adjust: none;
+}
+/*clearfix*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+h3{
+	font-weight: bold;
+	font-size: 16px;
+}
+h3.stit {
+    font-size: 14px;
+    font-weight: bold;
+    background-image: url("/wp-content/themes/reform/page_image/stit_bg.gif");
+    padding: 8px 0 8px 10px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/*PCサイトにあるもので、スマホでは非表示にするもの*/
+.sp_none {
+	display: none;
+}
+img{
+  max-width:100%;
+  height: auto;
+}
+img.w98{
+	width:98%;
+	margin: 0 auto;
+}
+/*ヘッダー:header*/
+
+
+#header {
+}
+/*トップページinfo:top-info*/
+
+#head {
+	background-color: #453e3f;
+	height: 11%;
+}
+#head .inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#head .inner .title{
+	width: 56%;
+    padding: 0 0 0 10px;
+}
+#head .inner .menu-nav{
+	width: 20%;
+}
+#head .btn {
+	padding: 0;
+	text-align: right;
+	width: 26%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#head .btn a{
+	display: block;
+	width: 45%;
+}
+#head .btn .contact {
+}
+#head .btn .tel {
+}
+/*ロールアウト用背景*/
+/*ロールオーバー用背景*/
+#head .btn .hover {
+	background-color: #FFF;
+}
+/*ヘッダーメニュー*/
+#menu-nav {
+	display: table-cell;
+	vertical-align: bottom;
+	text-align: right;
+	padding: 0;
+	float: right;
+	width: 12%;
+    margin-bottom: 5px;
+}
+#menu-button {
+	margin: 0;
+	float: right;
+}
+#menu-button-inner {
+	margin: 0;
+	float: right;
+}
+/*ロールオーバー用*/
+#menu-nav #menu-button div.hover {
+	background-image: -moz-linear-gradient( 90deg, rgb(68,60,45) 0%, rgb(34,24,7) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(68,60,45) 0%, rgb(34,24,7) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(68,60,45) 0%, rgb(34,24,7) 100%);
+}
+#d-menu {
+	clear: both;
+	display: none;
+	position: absolute;
+	width: 100%;
+	/*background-color: #f9f7f0;*/
+	-moz-box-shadow: 0 2px 2px rgba(25, 68, 99, .4);
+	-webkit-box-shadow: 0 2px 2px rgba(25, 68, 99, .4);
+	-ms-box-shadow: 0 2px 2px rgba(25, 68, 99, .4);
+	-o-box-shadow: 0 2px 2px rgba(25, 68, 99, .4);
+	box-shadow: 0 2px 2px rgba(25, 68, 99, .4);
+	margin-top: 0px;
+	z-index: 10;
+}
+#d-menu ul {
+	overflow: hidden;
+}
+#d-menu li {
+	width: 100%;
+	z-index:10;
+}
+#d-menu a {
+	background-color: rgba(255,255,255, 0.949);
+	color: #000;
+	text-align: left;
+	white-space: nowrap;
+	text-decoration: none;
+	display: block;
+	-moz-transition: color 0.3s linear, background-color 0.3s linear;
+	-o-transition: color 0.3s linear, background-color 0.3s linear;
+	-webkit-transition: color 0.3s linear, background-color 0.3s linear;
+	-ms-transition: color 0.3s linear, background-color 0.3s linear;
+	transition: color 0.3s linear, background-color 0.3s linear;
+	-moz-box-shadow: inset 0 0 2px #0A3E64;
+	-o-box-shadow: inset 0 0 2px #0A3E64;
+	-webkit-box-shadow: inset 0 0 2px #f9f7f0;
+	-ms-box-shadow: inset 0 0 2px #0A3E64;
+	box-shadow: inset 0 0 2px #f9f7f0;
+	line-height: 2.875em; /* 46/16 = 3.375em */
+	height: 2.875em; /* 46/16 = 3.375em */
+	padding: .375em; /* 6/16 = .375em */
+	border-bottom: #453e3f solid 1px;
+}
+#d-menu li:first-child {
+	border-top: #453e3f solid 1px;
+}
+#d-menu a:hover, #d-menu a:active {
+	color: #484848;
+	background-color: #f9f7f0;
+}
+#d-menu ul {
+	z-index: 4;
+	display: inherit;
+}
+#d-menu li a {
+	position: relative;
+}
+#d-menu li a:before {
+	display: block;
+	content: "";
+	position: absolute;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 51%;
+	right: 10px;
+	width: 6px;
+	height: 6px;
+	margin-top: -5px;
+	background: #877c5f;
+}
+#d-menu li a:after {
+	display: block;
+	content: "";
+	position: absolute;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 51%;
+	right: 12px;
+	width: 6px;
+	height: 6px;
+	margin-top: -5px;
+	background: #a1b91d;
+	background-image: -moz-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(255,255,255) 100%);
+}
+
+
+#head .menu {
+	padding: 0;
+	margin: 0;
+	float: right;
+	height: 43px;
+	width: 35px;
+	background-image: -moz-linear-gradient( 90deg, rgb(34,24,7) 0%, rgb(68,60,45) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(34,24,7) 0%, rgb(68,60,45) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(34,24,7) 0%, rgb(68,60,45) 100%);
+	border: none;
+}
+
+
+/*上へ戻る*/
+.go_top {
+	width: 95%;
+	padding-top: 15px;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 15px;
+	margin: 0 auto 20px;
+	display: block;
+	border: solid 1px #453e3f;
+	background: #9b9b9b;
+	color: #FFF;
+	font-size: 12px;
+	clear: both;
+	text-align: center;
+}
+.go_top img {
+}
+/*ロールオーバー用*/
+
+#wrap .go_top.hover {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(225, 222, 213);
+	background-image: -moz-linear-gradient( 90deg, rgb(237,236,231) 0%, rgb(225,222,213) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(237,236,231) 0%, rgb(225,222,213) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(237,236,231) 0%, rgb(225,222,213) 100%);
+}
+/*↓リンク↓*/
+#bottom_link {
+}
+/*ロールオーバー用*/
+#wrap #bottom_link a.hover, #wrap #bottom_link .inner_l a.hover, #wrap #bottom_link .inner_r a.hover {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(227, 220, 203);
+	background-image: -moz-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(249,247,240) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(249,247,240) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(249,247,240) 100%);
+}
+#bottom_link .pc {
+	color: #453e3f;
+	font-weight: bold;
+	width: 95%;
+	padding: 15px 0 15px 0;
+	margin: 0 auto 1px auto;
+	display: block;
+	border: solid 1px #453e3f;
+	background: #f4f4f4;
+	text-align: center;
+}
+#bottom_link .pc img {
+	margin-right: 5px;
+	margin-bottom: -5px;
+}
+#bottom_link .inner {
+	margin-top: 0;
+	margin-left: 2.3%;
+	margin-bottom: 20px;
+	margin-right: 0;
+}
+#bottom_link .inner_l {
+	margin-left: 2.3%;
+	padding-bottom: 15px;
+	width: 47.5%;
+	float: left;
+}
+#bottom_link .inner_r {
+	padding-bottom: 15px;
+	margin-right: 2.3%;
+	width: 47.5%;
+	float: right;
+}
+#bottom_link .inner_l .btn, #bottom_link .inner_r .btn {
+	color: #515151;
+	text-align: left;
+	display: block;
+	padding: 15px 0.1px 15px 7px;
+	margin-bottom: 1px;
+	border: solid 1px #453e3f;
+	background: #f4f4f4;
+	position: relative;
+	font-weight: bold;
+}
+#wrap #bottom_link .inner .btn.left {
+	margin-right: 0.23%;
+}
+
+/*↓電話、メールボタン↓*/
+#bottom_contact {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	margin: 0 auto 0 auto;
+	/* [disabled]z-index: 9999; */
+}
+#bottom_contact li {
+	border-left: #fff solid 1px;
+	padding: 10px;
+	background-color: rgba(127,190,38,0.8);
+}
+/*ロールオーバー用*/
+#bottom_contact a.hover {
+	/* background-image: -moz-linear-gradient( 90deg, rgb(68,60,45) 0%, rgb(34,24,7) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(68,60,45) 0%, rgb(34,24,7) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(68,60,45) 0%, rgb(34,24,7) 100%); */
+	background-color: #e77aad;
+}
+
+
+/*エラーが出るので、消さないでください*/
+ {
+}
+/*エラーが出るので、消さないでください*/
+
+/*フッター*/
+
+#foot {
+	padding-top: 15px;
+	padding-bottom: 90px;
+}
+#pc .pc-btn {
+	color: #fff;
+	display: block;
+	border-radius: 5px;
+	background-color: #4F4E50;
+	width: 40%;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 15px;
+	clear: both;
+	font-size: 12px;
+	text-align: center;
+}
+/*ロールオーバー用*/
+
+#wrap #pc a.hover {
+	background-color:#828183;
+}
+
+/*カテゴリー別施工事例*/
+#wrap #seko_cate {
+}
+
+#wrap #seko_cate h4 {
+border-bottom: 2px solid #F3EEE1;
+	text-align: left;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	font-weight: normal;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width:95%;
+}
+
+/*ロールオーバー用*/
+
+#wrap #seko_cate .top .tit{
+	margin-left: 7px;
+}
+#wrap #seko_cate .inner {
+	margin-top: 0;
+	margin-left: 2.3%;
+	margin-bottom: 20px;
+	margin-right: 0;
+}
+#wrap #seko_cate .inner_l {
+	margin-left: 2.3%;
+	padding-bottom: 15px;
+	width: 47.5%;
+	float: left;
+}
+#wrap #seko_cate .inner_r {
+	padding-bottom: 15px;
+	margin-right: 2.3%;
+	width: 47.5%;
+	float: right;
+}
+#wrap #seko_cate .inner_l .btn, #wrap #seko_cate .inner_r .btn {
+	color: #515151;
+	text-align: left;
+	display: block;
+	padding: 15px 0.1px 15px 7px;
+	margin-bottom: 1px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(227, 220, 203);
+	background-image: -moz-linear-gradient( 90deg, rgb(249,247,240) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(249,247,240) 0%, rgb(255,255,255) 100%);
+	position: relative;
+}
+#wrap #seko_cate .inner .btn.left {
+	margin-right: 0.23%;
+}
+#wrap #seko_cate .btn:before, #wrap #seko_cate .btn:before,
+#wrap #top_seko #seko_cate .top:before {
+	display: block;
+	content: "";
+	position: absolute;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 51%;
+	right: 10px;
+	width: 6px;
+	height: 6px;
+	margin-top: -5px;
+	background: #877c5f;
+}
+#wrap #seko_cate .inner_l .btn:after, #wrap #seko_cate .inner_r .btn:after,
+#wrap #top_seko #seko_cate .top:after {
+	display: block;
+	content: "";
+	position: absolute;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	top: 51%;
+	right: 12px;
+	width: 6px;
+	height: 6px;
+	margin-top: -5px;
+	background: #a1b91d;
+	background-image: -moz-linear-gradient( 90deg, rgb(249,247,240) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(249,247,240) 0%, rgb(255,255,255) 100%);
+}
+
+
+#top_access .box .name {
+	float: left;
+	width: 49%;
+	clear: right;
+	text-align: left;
+	font-size: 12px;
+	font-weight: lighter;
+	margin-top: 10px;
+	margin-left: 150px;
+}
+#top_access .box .open_time {
+	width: 49%;
+	float: left;
+	clear: left;
+	font-size: 10px;
+	margin-top: 5px;
+	text-align: left;
+	padding-left: 150px;
+	color: #515151;
+}
+/* 共通 */
+.text-left{text-align:left;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+.mt10{margin-top:10px;}		.mt20 {margin-top: 20px;}
+.mr10{margin-right:10px;}	.mr20 {margin-right: 20px;}
+.mb10{margin-bottom:10px;}	.mb20 {margin-bottom: 20px;}
+.ml10{margin-left:10px;}		.ml20 {margin-left: 20px;}
+.pull-left{float:left;}
+.pull-right{float:right;}
+/* page_common で 共通整形 */
+#wrap.page_common{
+	margin:0 auto;
+	width: 95%;
+	line-height: 1.5;
+	text-align: left;
+}
+#wrap.page_common h2.main_tit{
+	width:100%;
+	text-align: center;
+}
+ul.flex_list{
+	display: flex;
+	flex-wrap:wrap;
+}
+/* 一覧ページ共通整形 */
+.archive_common ul.archive_list{
+	margin:0 auto;
+	width: 95%;
+	display: flex;
+	flex-wrap:wrap;
+	text-align: left;
+}
+.archive_common ul.archive_list li {
+  font-size: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5em;
+  width: 49%;
+	border:solid 2px #ccc;
+}
+.archive_common ul.archive_list li:nth-child(odd) {
+    margin-right: 2%;
+}
+.archive_common ul.archive_list li a{
+	display:block;
+	padding:8px;
+}
+.archive_common .inner h3{
+	margin:10px auto;
+	text-align: center;
+	width: 100%;
+}
+ul.archive_list a .seko_txt_set {
+		text-align:left;
+		color:#000;
+		margin-bottom: 6px;
+}
+ul.archive_list a .seko_txt_set .tit{
+	font-weight: bold;
+	font-size: 15px;
+}
+ul.archive_list a .seko_txt_set .koki,
+ul.archive_list a .seko_txt_set .hiyo,
+ul.archive_list a .seko_txt_set .naiyo,
+ul.archive_list a .seko_txt_set .more {
+  color: #c86076;
+}
+.archive_common .more_btn a{
+    border-radius: 5px;
+    background: #453e3f;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+		text-align: center;
+}
+
+/*施工事例*/
+
+/*施工事例*/
+.seko_archive {
+	margin-bottom: 10px;
+}
+.seko_archive h3{
+	margin: 10px 0;
+	}
+.seko_archive .inner p a .tit {
+	color: #f62f83;
+	font-weight: bold;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.seko_archive h3 {
+	font-weight: normal;
+	font-size: 12px;
+	padding-top: 0px;
+	margin: 10px 0;
+}
+.seko_archive h3 .new {
+	color: #f62f83 !important;
+}
+.seko_archive .box_l {
+}
+.seko_archive .box {
+}
+.seko_archive .box p a {
+	color: #000;
+}
+.seko_archive .box p {
+	font-size: 10px;
+	text-align: center;
+	color: #515151;
+	margin-top: 5px;
+	line-height: 1.3;
+}
+.seko_archive .inner {
+}
+.seko_archive .box .pic img {
+	width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: auto;
+}
+.seko_archive .inner p a .tit {
+	color: #f62f83;
+	font-weight: bold;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.seko_archive {
+	padding-top: 0px;
+}
+
+.seko_archive ul.seko_box{
+	display: flex;
+	flex-wrap: wrap;
+}
+.seko_archive ul.seko_box li {
+	font-size:10px;
+	margin-bottom:10px;
+	font-size: 14px;
+	line-height: 1.5em;
+	width: 49%;
+	border:solid 2px #ccc;
+
+}
+/*.seko_archive ul.seko_box li.left {
+	padding-right:5px;
+}
+.seko_archive ul.seko_box li.right {
+	padding-left:5px;
+}*/
+
+.seko_archive ul li:nth-child(even){
+/* 	margin-right: 2%; */
+}
+.seko_archive ul li:nth-child(odd){
+	margin-right: 2%;
+/* 	clear:left; */
+}
+.seko_archive ul.seko_box li a{
+	display:block;
+	padding:8px;
+	color:#000;
+	text-align:left;
+}
+.seko_archive ul.seko_box li a .pic {
+	position:relative;
+	display:block;
+	margin-bottom:5px;
+	overflow: hidden;
+    position: relative;
+    padding-bottom: 70%;
+}
+.seko_archive ul.seko_box li a .tit {
+	color:#7fbe26;
+	font-weight:bold;
+	display:block;
+	margin-bottom:5px;
+}
+/*施工事例カテゴリバナー*/
+#seko_cate h3{
+	margin-bottom: 10px;
+}
+#seko_cate .seko_cate_box{
+}
+#seko_cate .seko_cate_box li{
+	margin-bottom:5px;
+}
+#seko_cate .seko_cate_box li:nth-child(even){
+	padding-left:3px;
+}
+#seko_cate .seko_cate_box li:nth-child(odd){
+	padding-right:3px;
+	clear:left;
+}
+#seko_cate .seko_cate_box li:last-child {
+	padding-right:15px;
+}
+/* 採用リンクエリア共通 */
+.saiyo_link p{
+  margin: 10px auto;
+  width:100%;
+}
+.saiyo_link p img{
+  max-width:100%;
+  height: auto;
+}
+.saiyo_link p a{
+	display:block;
+}
+/* マイナビのボーダー */
+img.mynavi_img {
+  width:95%;
+  border: solid 1px #14b0f1;
+}
+/* recruitの背景 */
+img.recruit_img{
+  width:95%;
+  background:#7fbe26;
+  padding:12px 0;
+}
+/* 問い合わせ */
+.s_contact .box {
+    background: url("/wp-content/themes/reform/images/kaiyu/s_contact_bg3.png") no-repeat;
+    height: 0;
+    padding-top: 42.11%;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	margin: 10px auto;
+}
+.s_contact .box .s_contact_btn{
+	width: 96%;
+	position: absolute;
+	top:30px;
+	left:2%;
+}
+.s_contact .box .s_contact_btn p{
+	display: inline-block;
+	width:46%;
+	margin: 0 1%;
+}
+.s_contact .box .s_contact_btn a{
+	display: block;
+}
+/*---- 施工事例カテゴリ別メインビジュアル ----*/
+#catMainImage a > img {
+	width: 100%;
+	margin-bottom: 5%;
+}
+
+/*---- ハンバーガーメニュー スクロール ----*/
+nav ul {
+	height: 100%;
+	overflow: auto;
+}
